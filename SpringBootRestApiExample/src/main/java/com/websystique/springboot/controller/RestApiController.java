@@ -20,7 +20,7 @@ import com.websystique.springboot.service.UserService;
 import com.websystique.springboot.util.CustomErrorType;
 
 @RestController
-@RequestMapping("/api")
+//@RequestMapping("/")
 public class RestApiController {
 
 	public static final Logger logger = LoggerFactory.getLogger(RestApiController.class);
@@ -30,7 +30,7 @@ public class RestApiController {
 
 	// -------------------Retrieve All Users---------------------------------------------
 
-	@RequestMapping(value = "/user/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity<List<User>> listAllUsers() {
 		List<User> users = userService.findAllUsers();
 		if (users.isEmpty()) {
